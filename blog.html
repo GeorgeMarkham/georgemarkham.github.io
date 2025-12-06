@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog - George Markham
+---
+
+<div class="container content-container">
+  <h1>Writing</h1>
+  <br>
+  
+  <ul style="list-style: none; padding: 0;">
+    {% for post in site.posts %}
+      <li style="margin-bottom: 2rem;">
+        <span style="color: var(--deep-stone); display:block; font-size: 0.9rem;">
+            {{ post.date | date: "%B %d, %Y" }}
+        </span>
+        <a href="{{ post.url }}" style="font-size: 1.5rem; font-weight: bold;">
+            {{ post.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div style="margin-top: 3rem;">
+      <a href="/">&larr; Back Home</a>
+  </div>
+</div>

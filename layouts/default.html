@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+
+  <style>
+    /* ===========================
+       COLOR PALETTE VARIABLES
+       =========================== */
+    :root {
+      --charcoal: #1C1C1E;
+      --bone: #F0EBE7;
+      --deep-stone: #3A3A3C;
+      --putty: #D5CFC8;
+      --muted-sand: #C7B8A9;
+      --bordeaux: #6A2E2F;
+      --smoky-olive: #565B45;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--charcoal);
+      color: var(--bone);
+      font-family: "Georgia", "Times New Roman", serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Links */
+    a { color: var(--muted-sand); text-decoration: none; transition: 0.2s; }
+    a:hover { color: var(--putty); }
+
+    /* Layout Containers */
+    .container {
+      padding: 3rem;
+      max-width: 800px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Homepage Style */
+    .home-container {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .name {
+      font-size: 6rem;
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.03em;
+    }
+    
+    .nav-links {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* Blog & Post Styles */
+    .content-container {
+      margin-top: 3rem;
+    }
+
+    .post-header { margin-bottom: 2rem; }
+    .post-title { font-size: 3rem; margin-bottom: 0.5rem; line-height: 1.1; }
+    .post-date { color: var(--deep-stone); font-style: italic; }
+
+    /* Markdown Content Styling */
+    .post-content { line-height: 1.6; font-size: 1.1rem; }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 { margin-top: 2rem; color: var(--putty); }
+    .post-content blockquote { 
+        border-left: 4px solid var(--deep-stone); 
+        padding-left: 1rem; 
+        color: var(--muted-sand); 
+    }
+
+    @media (max-width: 768px) {
+      .name { font-size: 3.5rem; }
+      .container { padding: 1.5rem; }
+      .post-title { font-size: 2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  {{ content }}
+</body>
+</html>
