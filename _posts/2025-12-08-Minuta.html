@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Minuta"
+date: 2025-12-08
+---
+<div class="post-content">
+<h1> Minuta - My first app</h1>
+    <p>I have finally released my first ever personal project to the app store! I would love to say this has been a gruelling process but in reality it has probably only taken about 8 hours or so to pull this thing together.</p>
+
+    <p>The app is a simple one: A journalling app for people who hate journalling. The idea sprang from two places, one is my inability to stick with a journalling solution despite being well aware of it's benefits and the second from a conversation I had with Erin Sparling at SwiftLeeds around limitations breeding creativity.</p>
+
+    <p>The idea therefore is to encourage jorunalling with prompts and a character limit. Essentially a "tweet to yourself" idea (with emojis). The app comes with a number of prompts to get you to think about your day or the current moment. You can pick it up whenever you want, write a quick journal entry and put it back down again. The idea is you <i>can't</i> write too much so the pressure is off.</p>
+
+    <p>A little bit about the tech stack: I'm using SwiftUI, SwiftData and that's it. All of the UI is completely standard SwiftUI, I threw in some liquid glass and then it's all backed by a SwiftData store that contains a total of one model. There is some information stored in UserDefaults but that's honestly it. It's the simplest app I've ever built.</p>
+
+    <p>I've used CoreData extensively but haven't had much opportunity yet to poke around with SwiftData so this was a great project to dip my toes. I don't hate it but we'll see if that turns into the kind of love/hate (mostly hate) relationship one can develop with CoreData.</p>
+
+    <p>In terms of architecture there really isn't much. It uses SwiftUI-flavoured MVVM (seems to be what Apple wants from us?) and I've hooked into all the nice SwiftUI property wrappers for automatic data updates. Normally my gut tells me to go fully into the architecture on even my personal projects but here I decided to keep it as simple as possible. There's very little to architect and I decided to follow that old north star KISS (keep it simple stupid). The joy of this project is I don't want anyone's journal entries to leave their phone so there's no networking at all, thus the architecture melts away like snow in the spring.</p>
+
+    <p>That's it for the app roundup. I'll be adding more features as time goes on (next one is the ability to schedule a reminder notification, all locally of course) and likely update this blog with those features as they come out.</p>
+
+    <p>The link to download the app is <a href="https://apps.apple.com/us/app/minuta/id6756197366" target="_blank">here (https://apps.apple.com/us/app/minuta/id6756197366)</a>, if you download it and enjoy it please leave a review! Also feel free to review if you hate it, the only way we progress is through failure so the more failure the better?</p>
+</div>
